@@ -1,5 +1,14 @@
 services:
 
+  hangman-words:
+    image: hangman
+    build: .
+    command:
+      - python
+      - hangman/words.py
+    ports:
+      - "8001:8001"
+
   hangman-api:
     image: hangman
     build: .
